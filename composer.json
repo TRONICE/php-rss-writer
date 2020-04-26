@@ -13,12 +13,21 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "suin",
+      "email": "suinyeze@gmail.com",
+      "role": "Author"
+    },
+    {
       "name": "John Chen",
-      "email": "john@tronice.com"
+      "email": "john@tronice.com",
+      "homepage": "https://www.tronice.com",
+      "role": "Developer"
     },
     {
       "name": "Firch Tsai",
-      "email": "firch@tronice.com"
+      "email": "firch@tronice.com",
+      "homepage": "https://www.tronice.com",
+      "role": "Developer"
     }
   ],
   "require": {
