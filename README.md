@@ -179,7 +179,7 @@ Output:
 You can install directly via [Composer](https://getcomposer.org/):
 
 ```bash
-$ composer require johnpupu/php-rss-writer
+$ composer require tronice/php-rss-writer
 ```
 
 ### Manual installation
@@ -189,7 +189,7 @@ Add the following code to your `composer.json` file:
 ```json
 {
     "require": {
-        "johnpupu/php-rss-writer": "dev-master@dev"
+        "tronice/php-rss-writer": "dev-master@dev"
     }
 }
 ```
