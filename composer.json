@@ -1,5 +1,5 @@
 {
-  "name": "johnpupu/php-rss-writer",
+  "name": "TRONICE/php-rss-writer",
   "type": "library",
   "description": "Yet another simple RSS writer library for PHP 5.4 or later.",
   "keywords": [
@@ -9,12 +9,16 @@
     "feed",
     "php"
   ],
-  "homepage": "https://github.com/johnpupu/php-rss-writer",
+  "homepage": "https://github.com/TRONICE/php-rss-writer",
   "license": "MIT",
   "authors": [
     {
-      "name": "johnpupu",
-      "email": "johnpupuyeze@gmail.com"
+      "name": "John Chen",
+      "email": "john@tronice.com"
+    },
+    {
+      "name": "Firch Tsai",
+      "email": "firch@tronice.com"
     }
   ],
   "require": {
