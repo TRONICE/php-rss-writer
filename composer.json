@@ -1,5 +1,5 @@
 {
-  "name": "TRONICE/php-rss-writer",
+  "name": "tronice/php-rss-writer",
   "type": "library",
   "description": "Yet another simple RSS writer library for PHP 5.4 or later.",
   "keywords": [
