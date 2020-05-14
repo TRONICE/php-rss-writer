@@ -56,6 +56,17 @@ class ChannelPodcast
     }
 
     /**
+     * Set channel itunes:explicit
+     * @param string $explicit
+     * @return $this
+     */
+    public function explicit($explicit)
+    {
+        $this->explicit = $explicit;
+        return $this;
+    }
+
+    /**
      * Set channel itunes:owner
      * @param string $owner
      * @return $this
@@ -112,6 +123,10 @@ class ChannelPodcast
             } else {
                 $xml->addChild('xmlns:itunes:summary', $this->summary);
             }
+        }
+
+        if ($this->author !== null) {
+            $xml->addChild('xmlns:itunes:explicit', $this->explicit);
         }
 
         if ($this->owner !== null && is_array($this->owner)) {
