@@ -144,11 +144,11 @@ class ItemPodcast
         }
 
         if ($this->duration !== null) {
-            $xml->addChild('itunes:duration', $this->duration);
+            $xml->addChild('xmlns:itunes:duration', $this->duration);
         }
 
         if ($this->explicit !== null) {
-            $xml->addChild('itunes:explicit', $this->explicit);
+            $xml->addChild('xmlns:itunes:explicit', $this->explicit);
         }
 
         return $xml;
