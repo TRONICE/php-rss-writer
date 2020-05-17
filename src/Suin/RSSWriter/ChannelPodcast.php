@@ -125,7 +125,7 @@ class ChannelPodcast
             }
         }
 
-        if ($this->author !== null) {
+        if ($this->explicit !== null) {
             $xml->addChild('xmlns:itunes:explicit', $this->explicit);
         }
 
