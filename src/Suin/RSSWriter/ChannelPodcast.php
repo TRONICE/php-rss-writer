@@ -20,6 +20,9 @@ class ChannelPodcast
     /** @var string */
     protected $owner;
 
+    /** @var string */
+    protected $type;
+
     protected $preferCdata = false;
 
     /**
@@ -74,6 +77,17 @@ class ChannelPodcast
     public function owner($owner)
     {
         $this->owner = $owner;
+        return $this;
+    }
+
+    /**
+     * Set channel itunes:type
+     * @param string $type
+     * @return $this
+     */
+    public function type($type)
+    {
+        $this->type = $type;
         return $this;
     }
 
@@ -144,6 +158,10 @@ class ChannelPodcast
         if ($this->image !== null) {
             $image = $xml->addChild('xmlns:itunes:image');
             $image->addAttribute('href', $this->image);
+        }
+
+        if ($this->type !== null) {
+            $xml->addChild('xmlns:itunes:type', $this->type);
         }
 
         // Ituens Category
