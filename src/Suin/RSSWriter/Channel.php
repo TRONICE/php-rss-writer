@@ -91,6 +91,17 @@ class Channel implements ChannelInterface
     }
 
     /**
+     * Set channel category
+     * @param string $category
+     * @return $this
+     */
+    public function category($category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    /**
      * Set ISO639 language code
      *
      * The language the channel is written in. This allows aggregators to group all
@@ -220,6 +231,19 @@ class Channel implements ChannelInterface
                 $xml->addCdataChild('description', $this->description);
             } else {
                 $xml->addChild('description', $this->description);
+            }
+        }
+
+        if ($this->category) {
+
+            $iterator = new \RecursiveIteratorIterator(new \RecursiveArrayIterator($this->category), \RecursiveIteratorIterator::SELF_FIRST);
+            foreach ($iterator as $k => $val) {
+                if ($this->preferCdata) {
+                    $xml->addCdataChild('category', $k);
+                } else {
+                    $xml->addChild('category', $k);
+                }
+
             }
         }
 
