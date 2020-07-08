@@ -15,9 +15,6 @@ class ItemPodcast
     protected $subtitle;
 
     /** @var string */
-    protected $author;
-
-    /** @var string */
     protected $summary;
 
     /** @var string */
@@ -42,17 +39,6 @@ class ItemPodcast
     protected $block;
 
     protected $preferCdata = false;
-
-    /**
-     * Set item itunes:author
-     * @param string $author
-     * @return $this
-     */
-    public function author($author)
-    {
-        $this->author = $author;
-        return $this;
-    }
 
     /**
      * Set item itunes:title
@@ -176,10 +162,6 @@ class ItemPodcast
 
         if ($this->title !== null) {
             $xml->addChild('xmlns:itunes:title', $this->title);
-        }
-
-        if ($this->author !== null) {
-            $xml->addChild('xmlns:itunes:author', $this->author);
         }
 
         if ($this->subtitle !== null) {
